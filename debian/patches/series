@@ -15,8 +15,6 @@ debian/ia64-hardcode-arch-script-output.patch
 debian/mips-disable-werror.patch
 debian/mips-boston-disable-its.patch
 debian/arch-sh4-fix-uimage-build.patch
-debian/tools-perf-version.patch
-debian/tools-perf-install.patch
 debian/wireless-add-debian-wireless-regdb-certificates.patch
 
 # Fixes/improvements to firmware loading
@@ -69,7 +67,6 @@ bugfix/arm64/arm64-acpi-Add-fixup-for-HPE-m400-quirks.patch
 
 # Lockdown missing pieces
 features/all/lockdown/mtd-disable-slram-and-phram-when-locked-down.patch
-features/all/lockdown/arm64-add-kernel-config-option-to-lock-down-when.patch
 # until the "kernel_lockdown.7" manual page exists
 features/all/lockdown/lockdown-refer-to-debian-wiki-until-manual-page-exists.patch
 
