@@ -19,16 +19,15 @@ diff --git a/Makefile b/Makefile
 index f87a5d6ab78b..36e3cc18c023 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1102,7 +1102,8 @@ scripts: scripts_basic scripts_dtc
- PHONY += prepare archprepare
+@@ -1168,7 +1168,7 @@ PHONY += prepare archprepare
  
  archprepare: outputmakefile archheaders archscripts scripts include/config/kernel.release \
--	asm-generic $(version_h) $(autoksyms_h) include/generated/utsrelease.h
-+	asm-generic $(version_h) $(autoksyms_h) include/generated/utsrelease.h \
-+	include/generated/package.h
+        asm-generic $(version_h) $(autoksyms_h) include/generated/utsrelease.h \
+-       include/generated/autoconf.h
++       include/generated/package.h
  
  prepare0: archprepare
- 	$(Q)$(MAKE) $(build)=scripts/mod
+        $(Q)$(MAKE) $(build)=scripts/mod
 @@ -1154,6 +1155,16 @@ define filechk_version.h
  	echo '#define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))'
  endef

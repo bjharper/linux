@@ -3,7 +3,6 @@ debian/gitignore.patch
 # Disable features broken by exclusion of upstream files
 debian/dfsg/arch-powerpc-platforms-8xx-ucode-disable.patch
 debian/dfsg/drivers-media-dvb-dvb-usb-af9005-disable.patch
-debian/dfsg/drivers-net-appletalk-cops.patch
 debian/dfsg/video-remove-nvidiafb-and-rivafb.patch
 debian/dfsg/documentation-fix-broken-link-to-cipso-draft.patch
 
@@ -14,7 +13,6 @@ debian/kernelvariables.patch
 debian/ia64-hardcode-arch-script-output.patch
 debian/mips-disable-werror.patch
 debian/mips-boston-disable-its.patch
-debian/arch-sh4-fix-uimage-build.patch
 debian/wireless-add-debian-wireless-regdb-certificates.patch
 
 # Fixes/improvements to firmware loading
