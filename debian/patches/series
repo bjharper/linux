@@ -2,7 +2,7 @@ debian/gitignore.patch
 
 # Disable features broken by exclusion of upstream files
 debian/dfsg/arch-powerpc-platforms-8xx-ucode-disable.patch
-debian/dfsg/drivers-media-dvb-dvb-usb-af9005-disable.patch
+#debian/dfsg/drivers-media-dvb-dvb-usb-af9005-disable.patch
 debian/dfsg/video-remove-nvidiafb-and-rivafb.patch
 debian/dfsg/documentation-fix-broken-link-to-cipso-draft.patch
 
@@ -10,13 +10,13 @@ debian/dfsg/documentation-fix-broken-link-to-cipso-draft.patch
 debian/version.patch
 debian/uname-version-timestamp.patch
 debian/kernelvariables.patch
-debian/ia64-hardcode-arch-script-output.patch
-debian/mips-disable-werror.patch
-debian/mips-boston-disable-its.patch
+#debian/ia64-hardcode-arch-script-output.patch
+#debian/mips-disable-werror.patch
+#debian/mips-boston-disable-its.patch
 debian/wireless-add-debian-wireless-regdb-certificates.patch
 
 # Fixes/improvements to firmware loading
-features/all/drivers-media-dvb-usb-af9005-request_firmware.patch
+#features/all/drivers-media-dvb-usb-af9005-request_firmware.patch
 debian/iwlwifi-do-not-request-unreleased-firmware.patch
 
 # Change some defaults for security reasons
@@ -30,28 +30,28 @@ debian/fs-enable-link-security-restrictions-by-default.patch
 # Set various features runtime-disabled by default
 debian/sched-autogroup-disabled.patch
 debian/yama-disable-by-default.patch
-debian/add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by-default.patch
+#debian/add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by-default.patch
 #features/x86/intel-iommu-add-option-to-exclude-integrated-gpu-only.patch
 #features/x86/intel-iommu-add-kconfig-option-to-exclude-igpu-by-default.patch
 
 # Disable autoloading/probing of various drivers by default
-debian/cdc_ncm-cdc_mbim-use-ncm-by-default.patch
-debian/snd-pcsp-disable-autoload.patch
+#debian/cdc_ncm-cdc_mbim-use-ncm-by-default.patch
+#debian/snd-pcsp-disable-autoload.patch
 #bugfix/x86/viafb-autoload-on-olpc-xo1.5-only.patch
-debian/fjes-disable-autoload.patch
+#debian/fjes-disable-autoload.patch
 
 # Taint if dangerous features are used
-debian/fanotify-taint-on-use-of-fanotify_access_permissions.patch
-debian/btrfs-warn-about-raid5-6-being-experimental-at-mount.patch
+#debian/fanotify-taint-on-use-of-fanotify_access_permissions.patch
+#debian/btrfs-warn-about-raid5-6-being-experimental-at-mount.patch
 
 # Arch bug fixes
-bugfix/arm/arm-dts-kirkwood-fix-sata-pinmux-ing-for-ts419.patch
+#bugfix/arm/arm-dts-kirkwood-fix-sata-pinmux-ing-for-ts419.patch
 bugfix/arm64/dts-rockchip-correct-voltage-selector-firefly-RK3399.patch
 #bugfix/x86/perf-tools-fix-unwind-build-on-i386.patch
 #bugfix/sh/sh-boot-do-not-use-hyphen-in-exported-variable-name.patch
 bugfix/arm/arm-mm-export-__sync_icache_dcache-for-xen-privcmd.patch
 #bugfix/powerpc/powerpc-boot-fix-missing-crc32poly.h-when-building-with-kernel_xz.patch
-bugfix/arm64/arm64-acpi-Add-fixup-for-HPE-m400-quirks.patch
+#bugfix/arm64/arm64-acpi-Add-fixup-for-HPE-m400-quirks.patch
 #bugfix/x86/x86-32-disable-3dnow-in-generic-config.patch
 #bugfix/ppc64el/libbpf-fix-readelf-output-parsing-on-powerpc-with-re.patch
 
