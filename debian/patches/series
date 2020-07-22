@@ -95,3 +95,6 @@ debian/wireless-disable-regulatory.db-direct-loading.patch
 # overlay: allow mounting in user namespaces
 
 # ABI maintenance
+
+# MISC
+debian/scripts_mod_build_error.patch

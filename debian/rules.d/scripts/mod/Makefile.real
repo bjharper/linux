@@ -3,7 +3,7 @@ PROGS = modpost.real-$(TYPE)
 include $(top_rulesdir)/Makefile.inc
 
 wrapperdir = $(top_rulesdir)/$(OUTDIR)
-CFLAGS += -I $(CURDIR)/real-$(TYPE) -I $(wrapperdir)/real-$(TYPE)
+CFLAGS += -I $(CURDIR)/real-$(TYPE) -I $(wrapperdir)/real-$(TYPE) -D__ODROID_PACKAGE__
 
 modpost.real-$(TYPE): file2alias.real-$(TYPE).o modpost.real-$(TYPE).o sumversion.real-$(TYPE).o
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^

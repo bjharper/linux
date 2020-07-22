@@ -1,0 +1,17 @@
+diff --git a/scripts/mod/devicetable-offsets.c b/scripts/mod/devicetable-offsets.c
+index 010be8ba2116..dbdc70478ec5 100644
+--- a/scripts/mod/devicetable-offsets.c
++++ b/scripts/mod/devicetable-offsets.c
+@@ -1,5 +1,12 @@
+ // SPDX-License-Identifier: GPL-2.0
+ #include <linux/kbuild.h>
++
++#ifdef __ODROID_PACKAGE__
++typedef struct {
++	unsigned char b[16];
++} guid_t;
++#endif
++
+ #include <linux/mod_devicetable.h>
+ 
+ #define DEVID(devid) DEFINE(SIZE_##devid, sizeof(struct devid))
