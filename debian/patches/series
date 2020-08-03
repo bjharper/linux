@@ -98,3 +98,4 @@ debian/wireless-disable-regulatory.db-direct-loading.patch
 
 # MISC
 debian/scripts_mod_build_error.patch
+debian/0001-ODROID-remove-non-ODROID-device-trees.patch
