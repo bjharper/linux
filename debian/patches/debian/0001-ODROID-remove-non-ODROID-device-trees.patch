@@ -1,18 +1,18 @@
-From 82681d00dc94aaeafc0212a74d54967550e87e80 Mon Sep 17 00:00:00 2001
+From c2f77415730255d90f4d780688307aec558792cf Mon Sep 17 00:00:00 2001
 From: Dongjin Kim <tobetter@gmail.com>
-Date: Fri, 4 Sep 2020 18:37:07 +0900
+Date: Tue, 20 Oct 2020 18:47:56 +0900
 Subject: [PATCH] ODROID: remove non-ODROID device trees
 
 Signed-off-by: Dongjin Kim <tobetter@gmail.com>
 ---
- arch/arm64/boot/dts/amlogic/Makefile | 48 ----------------------------
- 1 file changed, 48 deletions(-)
+ arch/arm64/boot/dts/amlogic/Makefile | 44 ----------------------------
+ 1 file changed, 44 deletions(-)
 
 diff --git a/arch/arm64/boot/dts/amlogic/Makefile b/arch/arm64/boot/dts/amlogic/Makefile
-index f8d28d4465510..09b90ccc95fb5 100644
+index a990faa9b402..0640ea2dfc07 100644
 --- a/arch/arm64/boot/dts/amlogic/Makefile
 +++ b/arch/arm64/boot/dts/amlogic/Makefile
-@@ -1,52 +1,4 @@
+@@ -1,52 +1,8 @@
  # SPDX-License-Identifier: GPL-2.0
 -dtb-$(CONFIG_ARCH_MESON) += meson-axg-s400.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-g12a-sei510.dtb
@@ -22,12 +22,12 @@ index f8d28d4465510..09b90ccc95fb5 100644
 -dtb-$(CONFIG_ARCH_MESON) += meson-g12b-gtking-pro.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-g12b-a311d-khadas-vim3.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-g12b-s922x-khadas-vim3.dtb
--dtb-$(CONFIG_ARCH_MESON) += meson-g12b-odroid-n2.dtb
+ dtb-$(CONFIG_ARCH_MESON) += meson-g12b-odroid-n2.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-g12b-ugoos-am6.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-kii-pro.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-nanopi-k2.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-nexbox-a95x.dtb
--dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-odroidc2.dtb
+ dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-odroidc2.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-p200.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-p201.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-gxbb-vega-s95-pro.dtb
@@ -59,12 +59,12 @@ index f8d28d4465510..09b90ccc95fb5 100644
 -dtb-$(CONFIG_ARCH_MESON) += meson-gxm-wetek-core2.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-sm1-sei610.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-sm1-khadas-vim3l.dtb
--dtb-$(CONFIG_ARCH_MESON) += meson-sm1-odroid-c4.dtb
+ dtb-$(CONFIG_ARCH_MESON) += meson-sm1-odroid-c4.dtb
+ dtb-$(CONFIG_ARCH_MESON) += meson-sm1-odroid-hc4.dtb
 -dtb-$(CONFIG_ARCH_MESON) += meson-a1-ad401.dtb
--
+ 
  dtb-$(CONFIG_ARCH_MESON) += meson64_odroidc2.dtb
  dtb-$(CONFIG_ARCH_MESON) += meson64_odroidc4.dtb
- dtb-$(CONFIG_ARCH_MESON) += meson64_odroidn2.dtb
 -- 
 2.17.1
 
