@@ -80,14 +80,12 @@ static int codec_mpeg12_start(struct amvdec_session *sess)
 		goto free_mpeg12;
 	}
 
-	ret = amvdec_set_canvases(sess, (u32[]){ AV_SCRATCH_0, 0 },
-					(u32[]){ 8, 0 });
-	if (ret)
-		goto free_workspace;
-
 	amvdec_write_dos(core, POWER_CTL_VLD, BIT(4));
 	amvdec_write_dos(core, MREG_CO_MV_START,
 			 mpeg12->workspace_paddr + WORKSPACE_OFFSET);
+
+        amvdec_write_dos(core, AV_SCRATCH_0, 0x050504);
+        amvdec_write_dos(core, AV_SCRATCH_1, 0x070706);
 
 	amvdec_write_dos(core, MPEG1_2_REG, 0);
 	amvdec_write_dos(core, PSCALE_CTRL, 0);
@@ -159,6 +157,11 @@ static irqreturn_t codec_mpeg12_threaded_isr(struct amvdec_session *sess)
 	u32 buffer_index;
 	u32 field = V4L2_FIELD_NONE;
 	u32 offset;
+	int ret;
+
+	if(sess->canvas_num == 0)
+	        ret = amvdec_set_canvases(sess, (u32[]){ AV_SCRATCH_0, 0 },
+                                        	(u32[]){ 2, 0 });
 
 	amvdec_write_dos(core, ASSIST_MBOX1_CLR_REG, 1);
 	reg = amvdec_read_dos(core, MREG_FATAL_ERROR);

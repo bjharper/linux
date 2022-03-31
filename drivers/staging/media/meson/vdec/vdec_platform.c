@@ -227,8 +227,8 @@ static const struct amvdec_format vdec_formats_g12a[] = {
 			 V4L2_FMT_FLAG_DYN_RESOLUTION,
 	}, {
 		.pixfmt = V4L2_PIX_FMT_MPEG1,
-		.min_buffers = 8,
-		.max_buffers = 8,
+		.min_buffers = 2,
+		.max_buffers = 2,
 		.max_width = 1920,
 		.max_height = 1080,
 		.vdec_ops = &vdec_1_ops,
@@ -238,8 +238,8 @@ static const struct amvdec_format vdec_formats_g12a[] = {
 		.flags = V4L2_FMT_FLAG_COMPRESSED,
 	}, {
 		.pixfmt = V4L2_PIX_FMT_MPEG2,
-		.min_buffers = 8,
-		.max_buffers = 8,
+		.min_buffers = 2,
+		.max_buffers = 2,
 		.max_width = 1920,
 		.max_height = 1080,
 		.vdec_ops = &vdec_1_ops,
